@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/Krishnakumarskr/wallet-ad#readme",
   "dependencies": {
+    "@walletconnect/web3-provider": "^1.8.0",
     "alchemy-sdk": "^2.2.3",
     "body-parser": "^1.20.1",
     "cors": "^2.8.5",
@@ -24,6 +25,11 @@
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
     "mongoose": "^6.7.4",
-    "web3": "^1.8.1"
+    "react-router-dom": "^6.4.4",
+    "web3": "^1.8.1",
+    "web3modal": "^1.9.10"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.2.4"
   }
 }
