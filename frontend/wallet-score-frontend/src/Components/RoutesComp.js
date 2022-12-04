@@ -2,7 +2,7 @@ import  { useGCtx } from '../GlobalContext';
 import { Route, Routes, Router,  useLocation } from "react-router-dom";
 
 import Home from './Home';
-import Dashboard from './Dashboard';
+import Search from './Search';
 
 
 
@@ -13,7 +13,7 @@ const RoutesComp = () => {
     return <>
     <Routes location={location}>
         <Route path="/" exact element={<Home />} />
-        <Route path="/dashboard" exact element={<Dashboard />} />
+        <Route path="/search" exact element={<Search />} />
     </Routes>
    
        

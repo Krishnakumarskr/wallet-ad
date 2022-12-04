@@ -2,6 +2,7 @@ const bodyParser = require("body-parser");
 const express = require("express");
 const cors = require("cors");
 const connectDB = require("./config/Database");
+const CalculateScore = require('./routes/calculateScore');
 
 connectDB();
 
@@ -24,6 +25,8 @@ app.use(cors({ origin: "*" }));
 app.get("/", (_req, res) => {
   res.send("API Running");
 });
+
+app.use("/v1", CalculateScore)
 
 
 
