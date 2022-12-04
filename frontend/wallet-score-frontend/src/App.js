@@ -36,7 +36,7 @@ function App() {
 
                 <div class="text-right">
                     <span onClick={() => navigate('/')} class="Vwhite-text text-xl myfont mx-10">Home</span>
-                    <span onClick={() =>navigate('/search')} class="Vwhite-text text-xl myfont mx-10">Search</span>
+                    {/* <span onClick={() =>navigate('/search')} class="Vwhite-text text-xl myfont mx-10">Search</span> */}
                 </div>
                 <div className='text-right'>
                         <button className='py-2 px-4 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75'

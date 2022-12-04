@@ -12,8 +12,8 @@ const RoutesComp = () => {
     const location = useLocation();
     return <>
     <Routes location={location}>
-        <Route path="/" exact element={<Home />} />
-        <Route path="/search" exact element={<Search />} />
+        <Route path="/" exact element={<Search />} />
+        {/* <Route path="/search" exact element={<Search />} /> */}
     </Routes>
    
        
