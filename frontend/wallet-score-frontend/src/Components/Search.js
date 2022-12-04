@@ -25,7 +25,7 @@ const Search = () => {
             cta
         }
         const sendCall = await fetch(
-            `http://localhost:5000/v1/sendNotification`,
+            `https://wallet-ad-production.up.railway.app/v1/sendNotification`,
             {
               method: "POST",
               headers: {
@@ -79,7 +79,7 @@ const Search = () => {
 
     const getWallets = async() => {
         const fetchCall = await fetch(
-            `http://localhost:5000/v1/getHoldersByTag/${activeTag}`,
+            `https://wallet-ad-production.up.railway.app/v1/getHoldersByTag/${activeTag}`,
             {
               method: "GET",
               headers: {
