@@ -86,8 +86,10 @@ const fetchOwners = async() => {
     let tempWallets = [];
     wallets.forEach(i => tempWallets.push(i.address));
     let localOwners = [];
+    const nfts = await getCollectionNFT(collections[i])
     let to = collections.length >= 5 ? 5 : collections.length;
     for(let i = 0; i < to; i++) {
+        const nfts = await getCollectionNFT(collections[i]);
         const res = await alchemy.nft
             .getOwnersForContract(collections[i].address)
         
@@ -274,6 +276,21 @@ const blueChipMaxis = async() => {
         Bluechips.insertMany({address: actualHolders[j], score: score, counts: count}).then(() => console.log(`Completed - ${j}`));
     }
 
+}
+
+const getCollectionNFT = (contractAddress) => {
+
+    const provider = new ethers.providers.JsonRpcProvider(process.env.QUICKNODE_API);
+    provider.connection.headers = { "x-qn-api-version": 1 };
+    const heads = await provider.send("qn_fetchNFTsByCollection", {
+        collection: contractAddress, //BAYC
+        omitFields: ["imageUrl", "traits"],
+        page: 1,
+        perPage: 10,
+    });
+    console.log(heads);
+
+    return heads;
 }
 
 
